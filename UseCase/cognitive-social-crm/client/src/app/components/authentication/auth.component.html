@@ -1,0 +1,27 @@
+<div
+  *ngIf="userState !== undefined && userState.logged; else not_loggedIn"
+  style="text-align:center;margin-top: 10%"
+>
+  <h3>Welcome! You are logged in as :</h3>
+  <h4>Name : {{ userState.loggedInAs.name }}</h4>
+  <h4>Email : {{ userState.loggedInAs.email }}</h4>
+
+  <a
+    class="btn btn-md btn-primary btn-login hideOnStartup"
+    href="{{ apiurl }}/auth/logout"
+    id="logoutButton"
+    >Logout</a
+  >
+</div>
+
+<ng-template #not_loggedIn>
+  <div style="text-align:center;margin-top: 10%">
+    <h4>You are not logged in. Please sign in.</h4>
+    <a
+      class="btn btn-md btn-primary btn-login hideOnStartup"
+      href="{{ apiurl }}/auth/login"
+      id="loginbutton"
+      >Login</a
+    >
+  </div>
+</ng-template>

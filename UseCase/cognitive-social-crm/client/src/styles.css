@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/ng2-slim-loading-bar/style.css";
+
+  .insight-box--negative {
+    background-color: #DC3545;
+  }
+  
+  .insight-box--positive {
+    background-color: #C5D86D;    
+  }

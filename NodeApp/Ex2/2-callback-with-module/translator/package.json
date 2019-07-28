@@ -1,0 +1,4 @@
+{
+    "name": "translator",
+    "main": "./lib/translator"
+}

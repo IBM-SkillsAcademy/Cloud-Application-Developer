@@ -1,0 +1,38 @@
+---
+applications:
+  - name: cognitive-social-crm
+    path: ./dist/
+    memory: 1024M
+    instances: 1
+    disk_quota: 1024M
+    timeout: 180
+    buildpack: sdk-for-nodejs
+    command: npm run start:prod
+    services:
+      - App ID-s1-alias
+    env:
+      CLOUDANT_USERNAME: <use cloudant username>
+      CLOUDANT_PASSWORD: <use cloudant password>
+      CLOUDANT_ANALYSIS_DB_NAME: analysis_db
+      NATURAL_LANGUAGE_UNDERSTANDING_IAM_APIKEY: <use natural language understanding iam API key>
+      NATURAL_LANGUAGE_UNDERSTANDING_URL: <use natural language understanding URL>
+      TONE_ANALYZER_IAM_APIKEY: <use tone analyzer iam API key>
+      TONE_ANALYZER_URL: <use tone analyzer url>
+      TWITTER_CONSUMER_KEY: <use twitter consumer key>
+      TWITTER_CONSUMER_SECRET: <use twitter consumer secret>
+      TWITTER_ACCESS_TOKEN: <use twitter access token>
+      TWITTER_ACCESS_SECRET: <use twitter access secret>
+      TWITTER_LISTEN_TO: <use your @tag>
+      TWITTER_FILTER_CONTAINING: <use keyword you want to filter in tweets>
+      TWITTER_PROCESS_RETWEETS: <whether you want to process retweets or not true or false>
+      APP_ID_CLIENT_ID: <use app id client id>
+      APP_ID_OAUTH_SERVER_URL: <use app id server url>
+      APP_ID_PROFILE_URL: <use app id profile url>
+      APP_ID_SECRET: <use app id secret>
+      APP_ID_TENANT_ID: <use app id tenant id>
+      APP_ID_VERSION: <use app id verion>
+      APP_ID_SERVICE_ENDPOINT: <use app id service endpoint>
+      LOGGING: true
+      LOG_LEVEL: info
+      OUTPUT_TYPE: json
+      SAVE_TYPE: cloudant

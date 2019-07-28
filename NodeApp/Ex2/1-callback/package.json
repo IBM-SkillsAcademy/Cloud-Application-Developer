@@ -1,0 +1,8 @@
+{
+    "name": "NodejsStarterApp",
+    "version": "0.0.1",
+    "description": "App for understanding Callback",
+    "scripts": {
+        "start": "node app.js"
+    }
+}
