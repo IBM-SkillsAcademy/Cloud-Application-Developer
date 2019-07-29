@@ -1,8 +1,0 @@
-{
-       "name": "NodejsStarterApp",
-        "version": "0.0.1",
-        "description": "A Hello World NodeJS sample",
-        "scripts": {
-		"start": "node app.js"
-	} 
-}

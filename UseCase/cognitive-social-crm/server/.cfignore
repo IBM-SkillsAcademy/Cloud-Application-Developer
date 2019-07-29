@@ -1,7 +1,0 @@
-node_modules
-*.md
-tsconfig.json
-tslint.json
-test/
-.env
-env.sample
