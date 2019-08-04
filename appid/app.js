@@ -55,7 +55,7 @@ passport.use(
     clientId: secrets.clientId,
     secret: secrets.secret,
     oauthServerUrl: secrets.oauthServerUrl,
-    redirectUri: "http://<your node public ip>:30089" + CALLBACK_URL
+    redirectUri: "<your node public ID >:30089" + CALLBACK_URL
   })
 );
 
@@ -67,7 +67,16 @@ passport.deserializeUser(function(obj, cb) {
   cb(null, obj);
 });
 
-app.get(CALLBACK_URL, passport.authenticate(WebAppStrategy.STRATEGY_NAME));
+
+app.get(CALLBACK_URL, passport.authenticate(WebAppStrategy.STRATEGY_NAME)
+// , 
+//function(req, res) {
+//  res.redirect("/index.html");
+//}
+);
+
+app.use("/index", passport.authenticate(WebAppStrategy.STRATEGY_NAME));
+
 
 if (isDocker) {
   credentials = { hostname: "redis", port: 6379 };
@@ -115,14 +124,11 @@ if (credentials.password != "" && credentials.password != undefined) {
   publisher.auth(credentials.password);
 }
 
-app.get("/", function(req, res) {
-  res.redirect("/index.html");
-});
+
 
 // Serve up our static resources
 app.get(
-  "/index.html",
-  passport.authenticate(WebAppStrategy.STRATEGY_NAME),
+  "/index",
   function(req, res) {
     fs.readFile("./public/index.html", function(err, data) {
       res.end(data);
