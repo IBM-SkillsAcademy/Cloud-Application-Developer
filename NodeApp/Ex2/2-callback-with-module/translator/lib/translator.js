@@ -7,7 +7,7 @@ exports.getTranslation = function getTranslation(inputData, callback) {
 	const password = vcap_services.language_translator[0].credentials.apikey;
 	
 	const options = {
-		hostname: 'gateway.watsonplatform.net',
+		hostname: 'gateway-lon.watsonplatform.net',
 		path: '/language-translator/api/v3/translate?version=2018-05-01',
 		method: 'POST',
 		headers: {
