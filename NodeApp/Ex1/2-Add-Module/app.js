@@ -11,7 +11,7 @@ http.createServer(function (request, response) {
 	response.writeHead(200, {'Content-Type': 'text/plain'});
 	
 	// Write a simple Hello World message appended with the current date
-	response.end('Hello NodeJS! The time now is: ' + dateModule.currentDateTime());
+	response.end('Hello Node.js! The time now is: ' + dateModule.currentDateTime());
    
 
 

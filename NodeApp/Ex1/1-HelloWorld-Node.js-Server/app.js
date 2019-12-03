@@ -11,7 +11,7 @@ http.createServer(function (request, response) {
 	
 	// Write a simple Hello World message,
 	// which will be shown in the user's web browser
-	response.end('Hello NodeJS!');   
+	response.end('Hello Node.js!');   
 
 
 }).listen(port);
