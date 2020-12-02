@@ -1,3 +1,5 @@
+//initializing env variable
+let env = JSON.parse(process.env.VCAP_SERVICES);
 // Watson Natural Language Understanding third party module
 //Specify the release for the Natural Language Understanding service
 let NaturalLanguageUnderstandingV1 =
