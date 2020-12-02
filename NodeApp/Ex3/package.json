@@ -8,6 +8,6 @@
 	"dependencies": {
 		"body-parser": "latest",
 		"express": "4.*",
-		"ibm-watson": "^4.3.0"
+		"watson-developer-cloud": "*"
 	}
 }
