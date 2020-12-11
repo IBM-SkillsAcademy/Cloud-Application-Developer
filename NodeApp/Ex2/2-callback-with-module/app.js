@@ -10,7 +10,7 @@ function handleRequests(userRequest, userResponse) {
 	userResponse.writeHead(200, {'Content-Type': 'text/plain'});
 	const inputData = JSON.stringify({
         "model_id": "en-es",
-        "text": "Hello"
+        "text": "Name"
     });
     var callback = function(error, translatorOutput) {
 		if (error) {
