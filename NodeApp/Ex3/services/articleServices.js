@@ -6,8 +6,8 @@ let NaturalLanguageUnderstandingV1 =
 require('watson-developer-cloud/natural-language-understanding/v1.js');
 let natural_language_understanding = new NaturalLanguageUnderstandingV1({
   version: '2018-11-16',
-  iam_apikey: SET_YOUR_APIKEY,
-url: 'https://gateway-lon.watsonplatform.net/natural-language-understanding/api'
+  iam_apikey: env["natural-language-understanding"][0]["credentials"]["apikey"],
+  url: env["natural-language-understanding"][0]["credentials"]["url"]
 }); 
 //error message for missing URL
 const MISSING_URL_ERROR = 'URL not passed';
