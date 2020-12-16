@@ -18,8 +18,8 @@ function handleRequests(userRequest, userResponse) {
 	const password = vcap_services.language_translator[0].credentials.apikey;
 
 	const options = {
-        hostname: 'gateway-lon.watsonplatform.net',
-        path: '/language-translator/api/v3/translate?version=2018-05-01',
+        hostname: 'api.eu-gb.language-translator.watson.cloud.ibm.com',
+        path: '/instances/87d327cb-31a6-4474-b687-3bd517ba8b17/v3/translate?version=2018-05-01',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
