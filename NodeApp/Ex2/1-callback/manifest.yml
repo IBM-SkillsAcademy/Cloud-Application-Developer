@@ -1,7 +1,0 @@
-applications:
-- path: .
-memory: 128M
-instances: 1
-name: vy102-611-nodejs
-host: vy102-611-nodejs
-disk_quota: 1024M
