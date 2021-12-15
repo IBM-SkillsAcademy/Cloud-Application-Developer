@@ -8,7 +8,7 @@ const ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
 const toneAnalyzer = new ToneAnalyzerV3({
   version: '2017-09-21',
   iam_apikey: env["tone_analyzer"][0]["credentials"]["apikey"] ,
-  url: 'https://gateway-lon.watsonplatform.net/tone-analyzer/api'
+  url: env["tone_analyzer"][0]["credentials"]["url"]
 });
 const cors = require('cors');
 
