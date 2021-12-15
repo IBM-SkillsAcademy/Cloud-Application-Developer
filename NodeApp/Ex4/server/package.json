@@ -13,8 +13,5 @@
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "watson-developer-cloud": "^4.0.1"
-  },
-  "engines": {
-    "node": "10.15.0"
   }
 }
